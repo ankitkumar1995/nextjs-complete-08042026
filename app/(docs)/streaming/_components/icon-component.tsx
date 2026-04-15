@@ -311,8 +311,11 @@ const icons = [
     },
 ];
 
-export default function IconComponent({ id }) {
-    const icon = icons.find((icon) => icon.id === id);
+type IconComponentProps = {
+    id: string;
+};
 
-    return <div className="h-24 w-24 text-gray-600 mb-4">{icon.icon}</div>;
+export default function IconComponent({ id }: IconComponentProps) {
+    const icon = icons.find((icon) => icon.id === id);
+    return <div className="h-24 w-24 text-gray-600 mb-4">{icon?.icon}</div>;
 }

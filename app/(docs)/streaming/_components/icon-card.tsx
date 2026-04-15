@@ -1,8 +1,11 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import IconComponent from "./icon-component";
 import LikeButton from "./like-button";
+type IconCardProps = {
+    tool: string;
+};
 
-export default function IconCard({ tool }) {
+export default function IconCard({ tool }: IconCardProps ) {     
     return (
         <Card className="w-full hover:cursor-pointer hover:shadow-md transition-all duration-200">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
